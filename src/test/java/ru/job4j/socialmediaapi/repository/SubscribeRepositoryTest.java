@@ -31,7 +31,7 @@ public class SubscribeRepositoryTest {
     }
 
     @Test
-    public void whenAddSubscribe_ThenGetSubscribe() {
+    public void whenAddSubscribeThenGetSubscribe() {
         var subscribe = new Subscribe();
         subscribeRepository.save(subscribe);
         var foundSubscribe = subscribeRepository.findById(subscribe.getId());
@@ -39,7 +39,7 @@ public class SubscribeRepositoryTest {
     }
 
     @Test
-    public void whenDeleteSubscribe_ThenGetSubscribe() {
+    public void whenDeleteSubscribeThenGetSubscribe() {
         var subscribe = new Subscribe();
         subscribeRepository.save(subscribe);
         var foundSubscribe = subscribeRepository.findById(subscribe.getId());
@@ -49,7 +49,7 @@ public class SubscribeRepositoryTest {
     }
 
     @Test
-    public void whenFindAllSubscribes_ThenGetSubscribes() {
+    public void whenFindAllSubscribesThenGetSubscribes() {
         var subscribe1 = new Subscribe();
         var subscribe2 = new Subscribe();
         var subscribe3 = new Subscribe();
@@ -62,7 +62,7 @@ public class SubscribeRepositoryTest {
     }
 
     @Test
-    public void whenFindSubscribeById_ThenGetSubscribe() {
+    public void whenFindSubscribeByIdThenGetSubscribe() {
         var subscribe1 = new Subscribe();
         subscribeRepository.save(subscribe1);
         var foundSubscribe = subscribeRepository.findById(subscribe1.getId());

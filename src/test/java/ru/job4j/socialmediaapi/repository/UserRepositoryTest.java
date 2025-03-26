@@ -37,7 +37,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void whenAddUser_thenReturnUser() {
+    public void whenAddUserThenReturnUser() {
         var user = new User();
         user.setName("testUs");
         user.setLogin("testUs@test.com");
@@ -49,7 +49,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void whenFindAllUsers_thenReturnAllUsers() {
+    public void whenFindAllUsersThenReturnAllUsers() {
         var user1 = new User();
         user1.setName("testUs");
         user1.setLogin("testUs@test.com");
@@ -66,7 +66,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void whenFindUserById_thenReturnUser() {
+    public void whenFindUserByIdThenReturnUser() {
         var user = new User();
         user.setName("testUs");
         user.setLogin("testUs@test.com");
@@ -78,7 +78,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void whenDeleteUser_thenReturnUser() {
+    public void whenDeleteUserThenReturnUser() {
         var user = new User();
         user.setName("testUs");
         user.setLogin("testUs@test.com");

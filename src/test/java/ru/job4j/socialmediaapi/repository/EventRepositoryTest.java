@@ -47,7 +47,7 @@ public class EventRepositoryTest {
     }
 
     @Test
-    public void whenSaveEvent_thenReturnEvent() {
+    public void whenSaveEventThenReturnEvent() {
         var event = new Event();
         event.setUser(user);
         event.setPost(post);
@@ -58,7 +58,7 @@ public class EventRepositoryTest {
     }
 
     @Test
-    public void whenDeleteEvent_thenReturnEvent() {
+    public void whenDeleteEventThenReturnEvent() {
         var event = new Event();
         event.setUser(user);
         event.setPost(post);
@@ -70,7 +70,7 @@ public class EventRepositoryTest {
     }
 
     @Test
-    public void whenFindAllEvents_thenReturnEvents() {
+    public void whenFindAllEventsThenReturnEvents() {
         var event = new Event();
         event.setUser(user);
         event.setPost(post);
@@ -84,7 +84,7 @@ public class EventRepositoryTest {
     }
 
     @Test
-    public void whenFindEventById_thenReturnEvent() {
+    public void whenFindEventByIdThenReturnEvent() {
         var event = new Event();
         event.setUser(user);
         event.setPost(post);

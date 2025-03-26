@@ -43,7 +43,7 @@ public class FileRepositoryTest {
     }
 
     @Test
-    public void whenSaveFile_thenReturnFile() {
+    public void whenSaveFileThenReturnFile() {
         var file = new File();
         file.setName("test");
         file.setPath("test");
@@ -54,7 +54,7 @@ public class FileRepositoryTest {
     }
 
     @Test
-    public void whenDeleteFile_thenReturnFile() {
+    public void whenDeleteFileThenReturnFile() {
         var file = new File();
         file.setName("test");
         file.setPath("test");
@@ -65,7 +65,7 @@ public class FileRepositoryTest {
     }
 
     @Test
-    public void whenFindAllFiles_thenReturnFiles() {
+    public void whenFindAllFilesThenReturnFiles() {
         var file1 = new File();
         file1.setName("test1");
         file1.setPath("test1");
@@ -82,7 +82,7 @@ public class FileRepositoryTest {
     }
 
     @Test
-    public void whenFindFileById_thenReturnFile() {
+    public void whenFindFileByIdThenReturnFile() {
         var file1 = new File();
         file1.setName("test1");
         file1.setPath("test1");

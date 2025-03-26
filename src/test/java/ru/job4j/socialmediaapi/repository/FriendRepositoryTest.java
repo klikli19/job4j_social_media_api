@@ -31,7 +31,7 @@ public class FriendRepositoryTest {
     }
 
     @Test
-    public void whenAddFriend_thenReturnFriend() {
+    public void whenAddFriendThenReturnFriend() {
         var friend = new Friend();
         friendRepository.save(friend);
         var result = friendRepository.findById(friend.getId());
@@ -39,7 +39,7 @@ public class FriendRepositoryTest {
     }
 
     @Test
-    public void whenDeleteFriend_thenReturnFriend() {
+    public void whenDeleteFriendThenReturnFriend() {
         var friend = new Friend();
         friendRepository.save(friend);
         var result = friendRepository.findById(friend.getId());
@@ -50,7 +50,7 @@ public class FriendRepositoryTest {
     }
 
     @Test
-    public void whenFindAllFriends_thenReturnFriends() {
+    public void whenFindAllFriendsThenReturnFriends() {
         var friend1 = new Friend();
         friendRepository.save(friend1);
         var friend2 = new Friend();
@@ -63,7 +63,7 @@ public class FriendRepositoryTest {
     }
 
     @Test
-    public void whenFindFriendById_thenReturnFriend() {
+    public void whenFindFriendByIdThenReturnFriend() {
         var friend1 = new Friend();
         friendRepository.save(friend1);
         var foundFriend = friendRepository.findById(friend1.getId());

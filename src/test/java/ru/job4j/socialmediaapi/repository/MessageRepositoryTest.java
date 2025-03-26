@@ -31,7 +31,7 @@ public class MessageRepositoryTest {
     }
 
     @Test
-    public void whenSaveMessage_thenReturnMessage() {
+    public void whenSaveMessageThenReturnMessage() {
         var message = new Message();
         message.setAccepted(true);
         messageRepository.save(message);
@@ -41,7 +41,7 @@ public class MessageRepositoryTest {
     }
 
     @Test
-    public void whenDeleteMessage_thenReturnMessage() {
+    public void whenDeleteMessageThenReturnMessage() {
         var message = new Message();
         message.setAccepted(true);
         messageRepository.save(message);
@@ -54,7 +54,7 @@ public class MessageRepositoryTest {
     }
 
     @Test
-    public void whenFindById_thenReturnMessage() {
+    public void whenFindByIdThenReturnMessage() {
         var message = new Message();
         message.setAccepted(true);
         messageRepository.save(message);
@@ -64,7 +64,7 @@ public class MessageRepositoryTest {
     }
 
     @Test
-    public void whenFindAllMessages_thenReturnMessages() {
+    public void whenFindAllMessagesThenReturnMessages() {
         var message1 = new Message();
         message1.setAccepted(true);
         messageRepository.save(message1);

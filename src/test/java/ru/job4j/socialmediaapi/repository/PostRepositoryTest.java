@@ -38,7 +38,7 @@ public class PostRepositoryTest {
     }
 
     @Test
-    public void whenAddPost_thenReturnPost() {
+    public void whenAddPosThenReturnPost() {
         var post = new Post();
         post.setTitle("test");
         post.setDescription("test");
@@ -50,7 +50,7 @@ public class PostRepositoryTest {
     }
 
     @Test
-    public void whenFindAllPosts_thenReturnAllPosts() {
+    public void whenFindAllPostsThenReturnAllPosts() {
         var post1 = new Post();
         post1.setTitle("test1");
         post1.setDescription("test1");
@@ -72,7 +72,7 @@ public class PostRepositoryTest {
     }
 
     @Test
-    public void whenFindPostById_thenReturnPost() {
+    public void whenFindPostByIdThenReturnPost() {
         var post = new Post();
         post.setTitle("test1");
         post.setDescription("test1");
@@ -84,7 +84,7 @@ public class PostRepositoryTest {
     }
 
     @Test
-    public void whenDeletePost_thenReturnPost() {
+    public void whenDeletePostThenReturnPost() {
         var post = new Post();
         post.setTitle("test1");
         post.setDescription("test1");
