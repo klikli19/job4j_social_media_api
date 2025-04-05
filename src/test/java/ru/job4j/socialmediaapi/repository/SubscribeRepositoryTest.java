@@ -45,7 +45,6 @@ public class SubscribeRepositoryTest {
         var foundSubscribe = subscribeRepository.findById(subscribe.getId());
         assertThat(foundSubscribe).isPresent();
         subscribeRepository.delete(foundSubscribe.get());
-        assertThat(subscribeRepository.findAll()).isNull();
     }
 
     @Test
@@ -57,7 +56,6 @@ public class SubscribeRepositoryTest {
         subscribeRepository.save(subscribe2);
         subscribeRepository.save(subscribe3);
         var foundSubscribe = subscribeRepository.findAll();
-        assertThat(foundSubscribe).hasSameClassAs(3);
         assertThat(foundSubscribe).isEqualTo(List.of(subscribe1, subscribe2, subscribe3));
     }
 

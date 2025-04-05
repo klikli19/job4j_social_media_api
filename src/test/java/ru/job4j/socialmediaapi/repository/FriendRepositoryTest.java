@@ -58,7 +58,6 @@ public class FriendRepositoryTest {
         var friend3 = new Friend();
         friendRepository.save(friend3);
         var foundFriends = friendRepository.findAll();
-        assertThat(foundFriends).hasSameClassAs(3);
         assertThat(foundFriends).isEqualTo(List.of(friend1, friend2, friend3));
     }
 
