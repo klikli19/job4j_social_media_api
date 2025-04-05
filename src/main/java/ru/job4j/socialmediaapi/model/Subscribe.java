@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "subscribers")
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -23,4 +22,28 @@ public class Subscribe {
     @ManyToOne
     @JoinColumn(name = "user_to_id")
     private User userTo;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUserSubscriber() {
+        return userSubscriber;
+    }
+
+    public void setUserSubscriber(User userSubscriber) {
+        this.userSubscriber = userSubscriber;
+    }
+
+    public User getUserTo() {
+        return userTo;
+    }
+
+    public void setUserTo(User userTo) {
+        this.userTo = userTo;
+    }
 }
