@@ -3,7 +3,6 @@ package ru.job4j.socialmediaapi.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-
 @Entity
 @Data
 @Table(name = "users")
