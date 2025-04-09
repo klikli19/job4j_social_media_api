@@ -40,12 +40,15 @@ public interface PostRepository extends JpaRepository<Post, Long> {
              """)
     int deletePostById(@Param("id") Long id);
 
+    Page<Post> findByOrderByCreatedDesc(Pageable pageable);
+
+
     @Query("""
              select post from Post post
              join User user on user.id = post.user.id
              join Subscribe s on user.id = s.userTo.id
              where s.userSubscriber.id = :id order by post.created desc
              """)
-    Page<Post> findByOrderByCreatedDesc(@Param("id") Long id, Pageable pageable);
+    Page<Post> findAllSubscriberPostsByUserOrderByCreatedDesc(@Param("id") Long id, Pageable pageable);
 
 }
