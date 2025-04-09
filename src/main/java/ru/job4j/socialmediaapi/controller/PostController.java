@@ -37,10 +37,10 @@ public class PostController {
 
     @PutMapping
     public ResponseEntity<Void> update(@RequestBody PostDTO post) {
-        if (postService.updateFormDTO(post)) {
-            return ResponseEntity.ok().build();
+        if (!postService.updateFormDTO(post)) {
+            return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.notFound().build();
+        return ResponseEntity.ok().build();
     }
 
     @PatchMapping
@@ -51,10 +51,10 @@ public class PostController {
 
     @DeleteMapping("/{postId}")
     public ResponseEntity<Void> removeById(@PathVariable long postId) {
-        if (postService.deleteById(postId)) {
-            return ResponseEntity.noContent().build();
+        if (!postService.deleteById(postId)) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping
