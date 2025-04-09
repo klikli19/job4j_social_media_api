@@ -12,4 +12,5 @@
     <include file="scripts/006_ddl_create_messages.sql" relativeToChangelogFile="true"/>
     <include file="scripts/007_ddl_create_events.sql" relativeToChangelogFile="true"/>
     <include file="scripts/008_ddl_create_requests.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/009_ddl_alter_table_requests_add_column.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
