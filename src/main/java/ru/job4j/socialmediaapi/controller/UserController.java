@@ -23,7 +23,6 @@ public class UserController {
                 .orElseGet(() -> (ResponseEntity.notFound().build()));
     }
 
-
     @PostMapping
     public ResponseEntity<User> save(@RequestBody User user) {
         userService.save(user);
