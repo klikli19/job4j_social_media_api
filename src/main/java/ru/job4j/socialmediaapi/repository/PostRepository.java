@@ -42,7 +42,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 
     Page<Post> findByOrderByCreatedDesc(Pageable pageable);
 
-
     @Query("""
              select post from Post post
              join User user on user.id = post.user.id
