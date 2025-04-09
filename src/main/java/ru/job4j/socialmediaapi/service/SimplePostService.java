@@ -42,6 +42,17 @@ public class SimplePostService implements PostService {
     }
 
     @Override
+    public boolean update(Post post) {
+        return postRepository.updateTitleAndDesc(post.getTitle(), post.getDescription(), post.getId()) > 0L;
+    }
+
+    @Override
+    public boolean updateFormDTO(PostDTO postDTO) {
+        var newPost = postMapper.getEntityFromDto(postDTO);
+        return postRepository.updateTitleAndDesc(newPost.getTitle(), newPost.getDescription(), newPost.getId()) > 0L;
+    }
+
+    @Override
     public Optional<Post> findById(Long postId) {
         return postRepository.findById(postId);
     }

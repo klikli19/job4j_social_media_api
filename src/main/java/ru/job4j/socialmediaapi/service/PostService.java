@@ -15,6 +15,10 @@ public interface PostService {
 
     Post create(PostDTO postDTO);
 
+    boolean update(Post post);
+
+    boolean updateFormDTO(PostDTO postDTO);
+
     Optional<Post> findById(Long postId);
 
     List<Post> findAll();
