@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import ru.job4j.socialmediaapi.dto.UserDTO;
 import ru.job4j.socialmediaapi.model.User;
 import ru.job4j.socialmediaapi.service.UserService;
 
@@ -60,5 +61,14 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     public List<User> getAll() {
         return userService.findAll();
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<List<UserDTO>> getUsersWithPosts(@PathVariable List<Long> userId) {
+        var usersWithPosts = userService.findUsersWithPostsList(userId);
+        if (usersWithPosts.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.ok(usersWithPosts);
     }
 }

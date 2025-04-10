@@ -1,5 +1,6 @@
 package ru.job4j.socialmediaapi.service;
 
+import ru.job4j.socialmediaapi.dto.UserDTO;
 import ru.job4j.socialmediaapi.model.User;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface UserService {
     List<User> findAllSubscribersById(Long userId);
 
     List<User> findAllFriendsById(Long userId);
+
+    List<UserDTO> findUsersWithPostsList(List<Long> useIds);
 }

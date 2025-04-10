@@ -62,4 +62,13 @@ public class PostController {
     List<Post> findAll() {
         return postService.findAll();
     }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<List<Post>> findPostsByUserId(@PathVariable() Long userId) {
+        var postsByUser = postService.findByUserId(userId);
+        if (postsByUser.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return ResponseEntity.ok(postsByUser);
+    }
 }
